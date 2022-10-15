@@ -13,7 +13,7 @@
         {{ item.name }}
       </h5>
       <p class="card-text">Ingredians: {{ item.description }}</p>
-      <p class="card-text">Price: {{ item.price }}</p>
+      <p class="card-text">Price: {{ item.price | currency }}</p>
       <p class="card-text">Availability: {{ item.availability }}</p>
     </div>
 
@@ -31,27 +31,21 @@
 </div>
 
 <form [formGroup]="info" (ngSubmit)="onSubmit()">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label"
-      >Email address</label
-    >
-    <input
-      type="email"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="name@example.com"
-    />
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label"
-      >Example textarea</label
-    >
-    <textarea
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      rows="3"
-    ></textarea>
-  </div>
+  <label for="first-name">
+    FirstName: <br />
+    <input type="text" formControlName="firstName" />
+  </label>
+  <br /><br />
+  <label for="last-name">
+    LastName: <br />
+    <input type="text" formControlName="lastName" />
+  </label>
+  <br /><br />
+  <label for="email">
+    Email: <br />
+    <input type="text" formControlName="email" />
+  </label>
+  <br /><br />
 
   <input type="submit" class="btn btn-primary" value="Submit" />
 </form>
