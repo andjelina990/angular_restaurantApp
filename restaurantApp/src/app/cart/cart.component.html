@@ -1,0 +1,57 @@
+<div class="text text-center display-5 m-5">Welcome to our menu</div>
+
+<div class="container">
+  <div
+    class="card m-4 d-inline-block container"
+    style="width: 18rem"
+    *ngFor="let item of items; index as i"
+  >
+    <div class="bg-info w-25 m-3 text-center"></div>
+    <img src="{{ item.img }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 routerLink="../products/{{ i }}" class="card-title">
+        {{ item.name }}
+      </h5>
+      <p class="card-text">Ingredians: {{ item.description }}</p>
+      <p class="card-text">Price: {{ item.price }}</p>
+      <p class="card-text">Availability: {{ item.availability }}</p>
+    </div>
+
+    <div class="card-body">
+      <button
+        type="button"
+        class="btn btn-danger mx-4"
+        routerLink="../products/{{ i }}"
+      >
+        Details
+      </button>
+      <button type="button" class="btn btn-info">Order</button>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Email address</label
+    >
+    <input
+      type="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Example textarea</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+    ></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
