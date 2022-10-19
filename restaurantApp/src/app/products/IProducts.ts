@@ -4,4 +4,5 @@ export interface IProducts {
   description: string;
   img: string;
   availability: boolean;
+  qnt: number;
 }

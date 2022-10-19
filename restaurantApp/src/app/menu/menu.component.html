@@ -1,4 +1,4 @@
-<div class="text text-center display-5 m-5">Welcome to our menu</div>
+<!-- <div class="text text-center display-5 m-5">Welcome to our menu</div>
 
 <div class="container">
   <div
@@ -32,6 +32,31 @@
       <ng-template #empty>
         <p>Not available</p>
       </ng-template>
+    </div>
+  </div>
+</div> -->
+
+<div class="container row m-auto mt-4">
+  <div
+    class="col-sm-12 col-md-6 col-lg-4 super"
+    *ngFor="let product of products; index as i"
+  >
+    <div class="card" style="width: 18rem">
+      <img src="{{ product.img }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p>{{ product.price | currency: "EUR" }}</p>
+      </div>
+      <ng-template [ngIf]="product.availability == true" [ngIfElse]="none">
+        <div id="btns">
+          <a routerLink="/products/{{ i }}" class="btn btn-primary">Details</a>
+          <a class="btn btn-danger" (click)="addToCart(product)">Add to cart</a>
+        </div>
+      </ng-template>
+      <ng-template #none>
+        <p class="alert">This item is not available</p></ng-template
+      >
     </div>
   </div>
 </div>

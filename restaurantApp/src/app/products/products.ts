@@ -6,6 +6,7 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/1.jpg',
     availability: true,
+    qnt: 0,
   },
   {
     name: 'Pork Burger',
@@ -14,6 +15,7 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/7.jpg',
     availability: true,
+    qnt: 0,
   },
   {
     name: 'Spagheti Bolognese',
@@ -22,6 +24,7 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/3.jpg',
     availability: true,
+    qnt: 0,
   },
   {
     name: 'Spagheti Carbonara',
@@ -30,6 +33,7 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/4.jpg',
     availability: true,
+    qnt: 0,
   },
   {
     name: 'Chicken Burger',
@@ -38,6 +42,7 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/5.jpg',
     availability: true,
+    qnt: 0,
   },
   {
     name: 'Pizza Diavolo',
@@ -46,5 +51,6 @@ export const products = [
       'Ingredients: spicy salami, hot pepper, red onion, ham, sausage, barbecue sauce, mozzarella',
     img: 'assets/1.jpg',
     availability: false,
+    qnt: 0,
   },
 ];
